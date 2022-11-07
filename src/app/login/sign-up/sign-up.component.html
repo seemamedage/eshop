@@ -1,0 +1,42 @@
+<div class="row" >
+    <div class="sign-up d-flex"> 
+      <div class="sign-up-logo"> 
+        <p  class="sign-up-title">signup</p>
+        
+      </div>
+      <form class="sign-up-form" [formGroup]="formsignup" (ngSubmit)="signup()">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">username</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="username">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="examplemobilenumber" class="form-label">mobilenumber</label>
+            <input type="email" class="form-control" id="examplemobilenumber" aria-describedby="emailHelp" formControlName="username">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+            <div *ngIf="formsignup.errors?.['passwordMismatch']"  class="invalid-feedback d-block">
+              Please choose a username.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword2" class="form-label">confirm password</label>
+            <input type="password" class="form-control" id="exampleInputPassword2" formControlName="password">
+      <div *ngIf="formsignup.errors?.['passwordMismatch']" class="invalid-feedback d-block">
+        Please choose a username.
+      </div>
+          </div>
+          
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary " [disabled]="!formsignup.valid">Submit</button>
+         </div>
+         <div class="d-grid gap-2 mt-4 ms-2">
+            <a class="text-primary  sign-up-link" (click)="RedirectToSignin()" >Existing user? Login</a><br>
+
+        </div>
+    </form>
+  </div>
+</div>

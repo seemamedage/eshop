@@ -1,0 +1,31 @@
+.navbar{
+    &-brand{
+  margin-left: 100px;
+  color: white;
+    }
+    .searchbtn{
+         width: 400px;
+    }
+    .loginbtn{
+        width: 100px;
+        border:1px solid white;
+        background-color: aliceblue;
+        border-radius: 1px solid;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .search-icon{
+      position:absolute;
+      z-index: 10;
+      color: blue;
+      right: 55%;
+      margin-top: 15px;
+    }
+    
+}
+.modal-dialog{
+  max-width: 500px;
+}
+.modal-body{
+  padding: 0;
+}

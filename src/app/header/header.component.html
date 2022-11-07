@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+    <div class="container-fluid">
+      <i style="color:white ;" class="fas fa-shipping-fast mt-2 "></i>
+      <a class="navbar-brand  text-white" href="#">Flipcart</a>
+      <form class="d-flex">
+        
+        <input class="form-control me-2 searchbtn mb-2 " type="search" placeholder="Search" aria-label="Search">
+        <span class="fas fa-search search-icon"></span>
+        
+        <button class="btn btn-outline-success" type="submit">Search </button>&nbsp;
+      </form>
+      <button class="navbar-toggler mx-4  ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mt-4" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active loginbtn " aria-current="page" data-bs-toggle="modal" data-bs-target="#loginModal">login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Become a seller</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-white" href="#" tabindex="-1" >Cart</a>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+    
+
+
+    
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body">
+        <app-sign-in *ngIf="actiontype == 'signin'" (actionEmit)="emmitedaction($event)"></app-sign-in>
+        <app-sign-up  *ngIf="actiontype =='signup'"></app-sign-up>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="row" >
+  <div class="sign-in d-flex"> 
+    <div class="sign-in-logo"> 
+      <p  class="sign-in-title">Login</p>
+      
+    </div>
+    <form class="sign-in-form" [formGroup]="formsignin" (ngSubmit)="signin()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="username">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+        </div>
+        
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary ">Submit</button>
+       </div>
+       <div class="d-grid gap-2 mt-4 ms-2">
+        <!-- <button type="submit" class="btn btn-primary ">Submit</button> -->
+
+        <a class="text-primary  sign-up-link" (click)="RedirectToSignup()" >New to Eshop>? create an Account</a><br>
+     </div>
+      </form>
+    </div>
+</div>
